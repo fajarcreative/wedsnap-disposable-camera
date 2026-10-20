@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#fff8f5", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-container-low": "#fbf2ed", "on-background": "#1e1b18", "on-tertiary-fixed-variant": "#574500", "surface-dim": "#e1d8d4", "on-primary-fixed": "#261900", "surface-variant": "#e9e1dc", "on-surface-variant": "#4d4639", "on-secondary": "#ffffff", "surface-container": "#f5ece7", "tertiary-fixed": "#ffe088", "on-tertiary-container": "#4e3d00", "tertiary": "#735c00", "on-tertiary-fixed": "#241a00", "primary-fixed": "#ffdea4", "on-secondary-fixed": "#281800", "inverse-primary": "#e6c27e", "outline": "#7f7668", "primary-container": "#b89758", "secondary": "#725b38", "background": "#fff8f5", "secondary-fixed-dim": "#e0c298", "surface-container-lowest": "#ffffff", "outline-variant": "#d1c5b5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#e6c27e", "error": "#ba1a1a", "primary": "#755a21", "secondary-fixed": "#fedeb2", "on-error": "#ffffff", "surface-tint": "#755a21", "inverse-surface": "#34302c", "on-surface": "#1e1b18", "on-secondary-container": "#78603e", "on-secondary-fixed-variant": "#584323", "surface-container-highest": "#e9e1dc", "inverse-on-surface": "#f8efea", "tertiary-container": "#cca72f", "surface-bright": "#fff8f5", "on-primary-container": "#443000", "on-primary-fixed-variant": "#5b430a", "surface-container-high": "#efe6e2", "secondary-container": "#fedeb2", "tertiary-fixed-dim": "#e9c349" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "margin": "1.25rem", "margin-desktop": "2.5rem", "space-md": "1rem" }, fontFamily: { "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "hud-counter": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"] }, fontSize: { "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "hud-counter": ["22px", { "lineHeight": "26px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(45,41,38,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="WedSnap Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo0oG-SrqG7Fm4jYg0rG76hKQhBEIsAjU7KKtrfBV296k5yVg5qCns-Mhzc2y2jjPMifQc1y4qCPIoqhgK5pUXpIk2WRLUU7DLWgbSMORxfa5naGb8rv90mVu52MdsEJMWFBsMCIk4dGaFfLxJ0RKL5K69vxP9m9L2Q1J6oTgyfvMbCIz_-NVkLNl2caTqg-YCiiOOQp9h0Z_zYNh9e7vbq1BhZlGAY1WLBabbwWB1bAh2hXYy6miR"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest leading-none">WedSnap</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-snug">Camera</h1></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-6 gap-space-md">
+<!-- Couple & Event Presence Pill -->
+<div class="w-full bg-surface-container rounded-xl p-space-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Radit &amp; Aluna</span>
+</div>
+<span class="font-label-md text-label-md text-secondary truncate">18 Oktober 2025 • Gedung Arsip</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm shrink-0">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Tersambung</span>
+</div>
+</div>
+<!-- Camera Viewfinder Card Frame -->
+<div class="w-full bg-surface-container-low rounded-xl p-3 shadow-md flex flex-col gap-3 relative overflow-hidden">
+<!-- Camera Viewport Container (4:3 aspect ratio) -->
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-inner bg-surface-dim select-none" id="viewfinderContainer">
+<!-- Simulated Camera Live Stream View -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 scale-100" data-alt="A warm, intimate wedding reception ballroom bathed in golden candlelight and subtle fairy lights. Guests mingling in elegant evening attire with champagne glasses, vintage warm tone floral arrangements of champagne roses and dried pampas grass, cinematic soft film grain texture." id="cameraFeed" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxsRjI2N5YWeSmrvcva9J-t3u6gjwl8YANLL4-ZQKtHccyYt45Sq6lNRP4Mmg16CkRpVjszY0XbstztWsSoiNYFcltJ3iMP86lnuHhfX1oKp_h73Hgm4fEaLTeGbGP_uoaxU-qKlspqIUFDsGxNcw7kYemZvfaUAnjePIiAOtwL9SyE4gATfo9Zr2s11Xi6H3ZsQ--gCbANo9q0-PiVAqtKpiA1RlMM_l1m-4Ax-pSHRKCJdlQ__Zx')"></div>
+<!-- Flash Overlay Element for Snap Micro-Interaction -->
+<div class="absolute inset-0 bg-surface pointer-events-none opacity-0 transition-opacity duration-150 z-30" id="shutterFlash"></div>
+<!-- Vintage Disposable Film Mask & Reticle -->
+<div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-3.5 z-10">
+<!-- Top Reticle & Film Code -->
+<div class="flex justify-between items-center text-surface-container-lowest/90 drop-shadow-sm font-hud-counter text-[11px] tracking-widest">
+<span class="bg-on-background/40 backdrop-blur-sm px-2 py-0.5 rounded text-surface">WS-FILM 400</span>
+<div class="flex items-center gap-1 bg-on-background/40 backdrop-blur-sm px-2 py-0.5 rounded text-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+<span>REC • LIVE</span>
+</div>
+</div>
+<!-- Rule of Thirds Thin Overlay -->
+<div class="absolute inset-0 grid grid-cols-3 grid-rows-3 pointer-events-none opacity-20">
+<div class="shadow-[inset_-1px_0_0_rgba(255,255,255,0.6)]"></div>
+<div class="shadow-[inset_-1px_0_0_rgba(255,255,255,0.6)]"></div>
+<div></div>
+<div class="shadow-[inset_0_-1px_0_rgba(255,255,255,0.6),inset_-1px_0_0_rgba(255,255,255,0.6)]"></div>
+<div class="shadow-[inset_0_-1px_0_rgba(255,255,255,0.6),inset_-1px_0_0_rgba(255,255,255,0.6)]"></div>
+<div class="shadow-[inset_0_-1px_0_rgba(255,255,255,0.6)]"></div>
+<div class="shadow-[inset_-1px_0_0_rgba(255,255,255,0.6)]"></div>
+<div class="shadow-[inset_-1px_0_0_rgba(255,255,255,0.6)]"></div>
+<div></div>
+</div>
+<!-- Four Corner Framing Brackets -->
+<div class="absolute top-3 left-3 w-4 h-4 shadow-[inset_2px_2px_0_rgba(255,222,164,0.85)]"></div>
+<div class="absolute top-3 right-3 w-4 h-4 shadow-[inset_-2px_2px_0_rgba(255,222,164,0.85)]"></div>
+<div class="absolute bottom-3 left-3 w-4 h-4 shadow-[inset_2px_-2px_0_rgba(255,222,164,0.85)]"></div>
+<div class="absolute bottom-3 right-3 w-4 h-4 shadow-[inset_-2px_-2px_0_rgba(255,222,164,0.85)]"></div>
+<!-- Bottom Status Line in Viewfinder -->
+<div class="flex justify-between items-end text-surface font-label-sm text-label-sm drop-shadow">
+<span class="bg-on-background/40 backdrop-blur-sm px-2 py-0.5 rounded">F2.8 • 1/60s</span>
+<span class="bg-on-background/40 backdrop-blur-sm px-2 py-0.5 rounded tracking-wider">EXP 22/36</span>
+</div>
+</div>
+<!-- Camera Permission Friendly Floating Banner -->
+<div class="absolute bottom-2 left-2 right-2 bg-surface/95 backdrop-blur-md rounded-lg p-2.5 shadow-lg z-20 flex items-center justify-between transition-all duration-300" id="permBanner">
+<div class="flex items-center gap-2 min-w-0 pr-2">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">videocam</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">Izinkan kamera untuk potret tajam</p>
+</div>
+<button class="shrink-0 bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1.5 rounded-full hover:bg-primary-container transition-all active:scale-95 shadow-sm" id="allowCamBtn">
+          Aktifkan
+        </button>
+</div>
+</div>
+<!-- Film Counter LCD Status Widget -->
+<div class="w-full bg-surface-container rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary-container flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold">Film Roll #1</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sisa</span>
+<span class="font-hud-counter text-hud-counter text-primary font-bold" id="counterValue">14</span>
+<span class="font-label-md text-label-md text-outline">/ 36 Foto</span>
+</div>
+</div>
+<!-- Segmented Film Gauge Indicator -->
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container rounded-full transition-all duration-300" id="filmProgress" style="width: 38.8%;"></div>
+</div>
+</div>
+</div>
+<!-- Handheld Ergonomic Camera Control Deck -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-4">
+<!-- Main Tactile Thumb Row -->
+<div class="flex items-center justify-between px-2">
+<!-- Lens Switch Button -->
+<div class="flex flex-col items-center gap-1">
+<button aria-label="Ganti Kamera Depan atau Belakang" class="w-12 h-12 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-all" id="flipCamBtn">
+<span class="material-symbols-outlined text-[24px]">flip_camera_ios</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Putar</span>
+</div>
+<!-- Centerpiece Vintage Shutter Trigger -->
+<div class="relative flex items-center justify-center -my-2">
+<!-- Golden Texture Outer Ring (80px) -->
+<div class="w-20 h-20 rounded-full bg-surface-container p-1 shadow-md flex items-center justify-center transition-transform" id="shutterRing">
+<!-- Tactile Inner Shutter (64px) with Pressed Feedback -->
+<button aria-label="Ambil Foto Pernikahan" class="w-16 h-16 rounded-full bg-primary-container hover:bg-primary active:scale-90 shadow-md flex items-center justify-center text-on-primary transition-all duration-150 cursor-pointer" id="shutterBtn">
+<span class="material-symbols-outlined text-[28px] opacity-90">photo_camera</span>
+</button>
+</div>
+</div>
+<!-- Latest Polaroid Quick Preview -->
+<div class="flex flex-col items-center gap-1">
+<div class="relative group cursor-pointer" id="lastPhotoTrigger">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high p-0.5 shadow-sm overflow-hidden flex items-center justify-center">
+<img alt="Preview Foto Terakhir" class="w-full h-full object-cover rounded" data-alt="A candid polaroid shot of a smiling wedding guest holding a glass of prosecco with warm ambient evening wedding lighting in the background, soft golden hour tone." id="miniThumb" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVSEEZnaVtdhHmQhKSVJkOuCH4OI80XXk6qUzaIGSWMCZHYfFP-JZC4TjNRP1feN-0D4pgAuQ-qVyTGctj-bIcMapxutq6wEEz24ZN_VQXt8PsjehCEdiMCWZ4aYg8Q81LLFnzZ7oM9gIltnb0N7mfEagIA4Lg6hxOSMUcVyzhPPkBiU1zp1jEILE1wHv6QVZHj5arWAKE5opTKmLB2oeYnPJ1wZJILCDIJ9f1GedoVYVwQPCyCQJS"/>
+</div>
+<!-- Cloud Synced Badge -->
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-600 rounded-full flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-surface text-[10px]">cloud_done</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Terakhir</span>
+</div>
+</div>
+<!-- Guest Roll Info Drawer Trigger & Policy -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 min-w-0 pr-2">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Batas 36 foto per tamu untuk momen terbaik</p>
+</div>
+<button class="shrink-0 font-label-md text-label-md text-primary font-semibold hover:text-on-primary-fixed-variant flex items-center gap-0.5 active:translate-x-0.5 transition-all" id="openDrawerBtn">
+<span>Foto Saya</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Empty / Roll Depleted Modal (Hidden by Default) -->
+<div class="hidden w-full bg-surface-container-high rounded-xl p-space-md shadow-lg flex flex-col items-center text-center gap-3 animate-fade-in" id="rollEmptyCard">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">celebration</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Roll Film Selesai!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+        Terima kasih banyak telah mengabadikan cinta Radit &amp; Aluna. Foto Anda sedang dicetak secara digital ke album pengantin.
+      </p>
+</div>
+<div class="flex w-full gap-space-sm pt-2">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" id="viewGalleryFinalBtn">
+        Lihat Semua Galeri Tamu
+      </button>
+</div>
+</div>
+<!-- Guest Roll Drawer Backdrop & Modal Preview -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex flex-col justify-end p-margin pb-safe" id="drawerSheet">
+<div class="w-full bg-surface rounded-2xl p-space-md shadow-2xl flex flex-col gap-3 max-h-[80vh] overflow-y-auto">
+<div class="flex items-center justify-between pb-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Koleksi Tamu</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">22 Foto Terambil</h3>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="closeDrawerBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Mini Contact Sheet Grid -->
+<div class="grid grid-cols-3 gap-2 py-2">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden shadow-sm">
+<img alt="Foto 1" class="w-full h-full object-cover" data-alt="A bride and groom dancing together in the spotlight surrounded by friends smiling, high quality vintage wedding photograph." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK224LJFTg9zpFwSGzgvWj-N0CLWuF4pPBwlet2xvp0WrnAu-4Irf52kJMPotCUVMDn6UPVynfiGzLp4AB_xzkCK0ZR1EygW0Pxm-YHeHYvm9-bqBU4_CaT8dC5pNjN6Xlw5-izadvV6bNI7aFOV3QneN7RWfB35sSf4vpjUKXoXrRe8QlAgsVjmXJswA1gfMMLp8cMpZmKfyRIrxwN4rd6qCDs_jXskYIHxGaWw2fNFFqe2q9P8zd"/>
+</div>
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden shadow-sm">
+<img alt="Foto 2" class="w-full h-full object-cover" data-alt="Close up of tiered white wedding cake decorated with gold leaf and fresh cream roses on an ivory linen tablecloth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxrqD3mGKexvbVMsF6xJSvIVP9Kzsszd8SYm3RTVO5hfo_Vfs0AjgIk0TJ3Dj-Umw23LAhvcvhpf5m9JcLMLpxBdG9VE8-s9EHC4MbAP-rOVvT5FeY4YZ-p2mHPg3NKc6B3PEftWo_AjeIxOKpjEuqqhB3yPgVxOMS1dgAp8uM4HROGSvGnjop16_c4FXD4EWPSD9YUWui91lFaS-8eLPBVnkulM_mObsHtSBm78TmlC8Bq6GGBnCk"/>
+</div>
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden shadow-sm">
+<img alt="Foto 3" class="w-full h-full object-cover" data-alt="A group of energetic young wedding guests toasting with champagne glasses at a cozy banquet table, warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkWCLqXCamgmNwB6FcGKOyYhKqQNML2tO6HkXXst60e1OGeeKt_-AT9cSldmJ1pvQR01NvU61TU40F2pKqeWK4ZyTA8y6FgVRmHZxhenuAGlKQMKwI4ehKkKYm26TyHwkaywuPqlXWXMxgT8hq1DQl_UkH26M1yh8j3z5l1RWed7mGFPoMkV5PpoOdWtKj3-kcQuFGYOIIJJQIpSYg89oxf4WiO5q5R1yyrSF0Ku61H_GzVB4VdbXT"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">cloud_sync</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sinkronisasi Cloud Aktif</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Foto Anda langsung diteruskan ke buku tamu pengantin.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initGuestCamera() {
+    let remainingShots = 14;
+    const totalShots = 36;
+    let isFlipped = false;
+
+    const shutterBtn = document.getElementById('shutterBtn');
+    const shutterFlash = document.getElementById('shutterFlash');
+    const counterValue = document.getElementById('counterValue');
+    const filmProgress = document.getElementById('filmProgress');
+    const flipCamBtn = document.getElementById('flipCamBtn');
+    const cameraFeed = document.getElementById('cameraFeed');
+    const permBanner = document.getElementById('permBanner');
+    const allowCamBtn = document.getElementById('allowCamBtn');
+    const rollEmptyCard = document.getElementById('rollEmptyCard');
+    const openDrawerBtn = document.getElementById('openDrawerBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+    const drawerSheet = document.getElementById('drawerSheet');
+    const lastPhotoTrigger = document.getElementById('lastPhotoTrigger');
+
+    // Camera Permission banner dismissal
+    if (allowCamBtn && permBanner) {
+      allowCamBtn.addEventListener('click', () => {
+        permBanner.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => permBanner.remove(), 300);
+      });
+    }
+
+    // Shutter Trigger Action with tactile sound/flash feedback
+    if (shutterBtn) {
+      shutterBtn.addEventListener('click', () => {
+        if (remainingShots <= 0) return;
+
+        // Visual Flash Animation
+        if (shutterFlash) {
+          shutterFlash.classList.remove('opacity-0');
+          shutterFlash.classList.add('opacity-100');
+          setTimeout(() => {
+            shutterFlash.classList.remove('opacity-100');
+            shutterFlash.classList.add('opacity-0');
+          }, 120);
+        }
+
+        // Slight Haptic Zoom
+        if (cameraFeed) {
+          cameraFeed.classList.add('scale-105');
+          setTimeout(() => cameraFeed.classList.remove('scale-105'), 200);
+        }
+
+        // Decrement Counter
+        remainingShots -= 1;
+        if (counterValue) counterValue.textContent = remainingShots;
+
+        // Update Progress Bar
+        if (filmProgress) {
+          const pct = ((remainingShots / totalShots) * 100).toFixed(1);
+          filmProgress.style.width = pct + '%';
+        }
+
+        // Check Roll Exhaustion
+        if (remainingShots <= 0) {
+          shutterBtn.disabled = true;
+          shutterBtn.classList.add('opacity-50', 'cursor-not-allowed');
+          if (rollEmptyCard) {
+            rollEmptyCard.classList.remove('hidden');
+            rollEmptyCard.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    }
+
+    // Flip Camera Toggle
+    if (flipCamBtn && cameraFeed) {
+      flipCamBtn.addEventListener('click', () => {
+        isFlipped = !isFlipped;
+        cameraFeed.style.transform = isFlipped ? 'scaleX(-1)' : 'scaleX(1)';
+      });
+    }
+
+    // Drawer Management
+    const openDrawer = () => {
+      if (drawerSheet) drawerSheet.classList.remove('hidden');
+    };
+    const closeDrawer = () => {
+      if (drawerSheet) drawerSheet.classList.add('hidden');
+    };
+
+    if (openDrawerBtn) openDrawerBtn.addEventListener('click', openDrawer);
+    if (lastPhotoTrigger) lastPhotoTrigger.addEventListener('click', openDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+    if (drawerSheet) {
+      drawerSheet.addEventListener('click', (e) => {
+        if (e.target === drawerSheet) closeDrawer();
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(45,41,38,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm">Ringkasan</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="camera" href="#"><span class="material-symbols-outlined text-[24px]">photo_camera</span><span class="font-label-sm text-label-sm">Kamera</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="gallery" href="#"><span class="material-symbols-outlined text-[24px]">photo_library</span><span class="font-label-sm text-label-sm">Galeri</span></a></div></nav></body></html>

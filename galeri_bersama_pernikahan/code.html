@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#fff8f5", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-container-low": "#fbf2ed", "on-background": "#1e1b18", "on-tertiary-fixed-variant": "#574500", "surface-dim": "#e1d8d4", "on-primary-fixed": "#261900", "surface-variant": "#e9e1dc", "on-surface-variant": "#4d4639", "on-secondary": "#ffffff", "surface-container": "#f5ece7", "tertiary-fixed": "#ffe088", "on-tertiary-container": "#4e3d00", "tertiary": "#735c00", "on-tertiary-fixed": "#241a00", "primary-fixed": "#ffdea4", "on-secondary-fixed": "#281800", "inverse-primary": "#e6c27e", "outline": "#7f7668", "primary-container": "#b89758", "secondary": "#725b38", "background": "#fff8f5", "secondary-fixed-dim": "#e0c298", "surface-container-lowest": "#ffffff", "outline-variant": "#d1c5b5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#e6c27e", "error": "#ba1a1a", "primary": "#755a21", "secondary-fixed": "#fedeb2", "on-error": "#ffffff", "surface-tint": "#755a21", "inverse-surface": "#34302c", "on-surface": "#1e1b18", "on-secondary-container": "#78603e", "on-secondary-fixed-variant": "#584323", "surface-container-highest": "#e9e1dc", "inverse-on-surface": "#f8efea", "tertiary-container": "#cca72f", "surface-bright": "#fff8f5", "on-primary-container": "#443000", "on-primary-fixed-variant": "#5b430a", "surface-container-high": "#efe6e2", "secondary-container": "#fedeb2", "tertiary-fixed-dim": "#e9c349" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "margin": "1.25rem", "margin-desktop": "2.5rem", "space-md": "1rem" }, fontFamily: { "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "hud-counter": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"] }, fontSize: { "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "hud-counter": ["22px", { "lineHeight": "26px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(45,41,38,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="WedSnap Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_WIkHQ9cxoqDvB115hi6CtSZ-wjSk4IfvRYlNuT2H2ZKZ64oBI38mDxJwpUyPTaRtsJVPEdqYURMisP0vOnMOa3eJMMzVnb48I_wsxi1RLXrrP0kcKwlOjmtZB33lzL_jrc8Y0tRe8m_Fq_kxFscREo-81JPTXCITOR7fJelT9rEbaCQ_gzFUWiEngDCMdpiysj3u8hHlFaKploRvZHAwcX53EZvfke3rFMczbFu_i42BfU20nHZ3"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest leading-none">WedSnap</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-snug">Gallery</h1></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Event Intro & Hero Narrative Card -->
+<section class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="material-symbols-outlined text-[16px]">celebration</span>
+<span>Dokumentasi Bersama Tamu</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+          Galeri Pernikahan Radit &amp; Aluna
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 flex-wrap">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span>Sabtu, 18 Oktober 2025</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Grand Ballroom Hotel Mulia, Jakarta</span>
+</p>
+</div>
+<!-- Roll Stats Badge -->
+<div class="mt-space-xs bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">photo_album</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Koleksi Terbuka</span>
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">248 Foto</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant bg-surface-container-highest px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-primary">groups</span>
+<span class="font-label-md text-label-md">42 Tamu</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<button class="flex items-center justify-center gap-1.5 h-12 px-space-sm bg-primary text-on-primary rounded-xl font-label-lg text-label-lg shadow-sm active:scale-[0.98] transition-transform" id="downloadZipBtn">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">folder_zip</span>
+<span class="truncate">Unduh ZIP</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 h-12 px-space-sm bg-surface-container-highest text-on-surface rounded-xl font-label-lg text-label-lg shadow-sm active:scale-[0.98] transition-transform" id="shareLinkBtn">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+<span class="truncate">Bagikan</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Filter Switcher -->
+<section class="px-margin pb-space-sm sticky top-16 z-30 bg-surface/95 backdrop-blur-md">
+<div class="bg-surface-container p-1 rounded-xl flex items-center justify-between gap-1 shadow-sm">
+<button class="gallery-tab active flex-1 py-2 px-2 text-center rounded-lg font-label-md text-label-md text-on-primary bg-primary shadow-sm transition-all" data-target="all">
+        Semua (248)
+      </button>
+<button class="gallery-tab flex-1 py-2 px-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-target="mine">
+        Foto Saya (14)
+      </button>
+<button class="gallery-tab flex-1 py-2 px-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-target="recent">
+        Terbaru
+      </button>
+</div>
+</section>
+<!-- Micro Notification Toast Container -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-[-8px]" id="toastNotification">
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-full shadow-lg flex items-center gap-2 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+<span id="toastMessage">Tautan tersalin ke clipboard!</span>
+</div>
+</div>
+<!-- Shared Photo Grid: Tactile Editorial Contact Sheet -->
+<section class="px-margin pb-space-xl flex flex-col gap-space-md">
+<!-- Grid -->
+<div class="grid grid-cols-2 gap-space-sm" id="photoGrid">
+<!-- Card 1 -->
+<div class="photo-card group bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col transition-transform active:scale-[0.99]" data-author="Clarissa N." data-caption="Lempar Bunga Bahagia" data-category="all recent" data-id="1" data-time="18.10.25 • 20:15">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Bride tossing lush ivory bouquet into a cheering crowd of wedding guests in an elegant warm ballroom, cinematic soft flash vintage disposable camera aesthetic, warm amber tones, candid motion blur, wedding celebration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDexcfTaup9IQoPe9aFGJL7c8ZiXRwGL2ofPtXDAwHR4fIZxwoLWERRSImk-PTb38yd2uC96NUJNA8y5g4GWN1SFvPsJJ2k6GvXneiQGkAcV52cQ3snLs834cf-Jgig2Bm-yCt8Pl1uVVu3J9IcCUorXn4faODBfNBqY9i6NoWbCfnRlL81kB8AFkXrixekWXKboL3lYovABliY0vwzMnOZhgQy6kSKe8TEz8WQj-XCiHJD5bu3IJie"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-70"></div>
+<span class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-primary/90 font-mono tracking-wider drop-shadow-sm">18.10.25 • WedSnap</span>
+<button class="photo-zoom-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+<div class="pt-2 px-1 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Lempar Bunga</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">oleh Clarissa N.</span>
+</div>
+<button class="save-photo-btn w-8 h-8 rounded-full bg-surface-container-low hover:bg-secondary-container text-on-surface-variant flex items-center justify-center shrink-0 transition-colors" title="Unduh Foto">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="photo-card group bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col transition-transform active:scale-[0.99]" data-author="Saya (Kamera 04)" data-caption="Senyum Pertama Berdua" data-category="all mine recent" data-id="2" data-time="18.10.25 • 19:42">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Radit and Aluna sharing an intimate quiet laugh at their sweetheart wedding table adorned with golden candle holders and soft ivory roses, warm indoor film grain lighting, candid documentary wedding photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYDu9Q1eC73GN51EAlF-vUNDi-fhS6CGYain_PRE7zjoyEztBOSajtkXWexsGyEw7dsI9nMDT6fYRIep8APriPJaUkqtuMgpRnVDxkiL9hkxHzQi42a8ICfRmJk8lll41oDxn87Rz8RSg9HH6btj6O_uyRnHRsvHF8je5tbzBtXhPw2hWwWeEfY263E4ssOahBZ3Mt6iDcOqzXitktb3FfqEbEUsB5eGDj-J-kb_aALHL8yEeQjDs-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-70"></div>
+<span class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-primary/90 font-mono tracking-wider drop-shadow-sm">18.10.25 • WedSnap</span>
+<span class="absolute top-2 left-2 bg-primary/80 backdrop-blur text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">Milikmu</span>
+<button class="photo-zoom-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+<div class="pt-2 px-1 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Tawa di Meja Utama</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Foto Kamu</span>
+</div>
+<button class="save-photo-btn w-8 h-8 rounded-full bg-surface-container-low hover:bg-secondary-container text-on-surface-variant flex items-center justify-center shrink-0 transition-colors" title="Unduh Foto">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="photo-card group bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col transition-transform active:scale-[0.99]" data-author="Dimas Arya" data-caption="Denting Gelas Toast Bersama" data-category="all" data-id="3" data-time="18.10.25 • 19:55">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Close up guest hands raising sparkling champagne flutes in a toast during luxury ballroom wedding reception, warm ambient fairy lights, subtle lens flare, editorial disposable 35mm film mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Jjtcuz7bBbLxfhzSvowRvvludwrpaM-K8p_1qPV08vCfJI4Wn1TwKwXrrr20truzSNJA-rL37LkDZiFbNcyqKTRVyAVVEMpzx1l5o9R8MPvd4L4DTcGHyRK4TlVbv0e2hB687E5tWpmrgyXiql07Dpgez5pZuvcFeokE0_Ogays_go6LNOc8vzYHp7A7yXMER2YEF7rbdKur6tDHP4_91_XWYZu7-Lqttjrh9sAaLuHDZiX_G472"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-70"></div>
+<span class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-primary/90 font-mono tracking-wider drop-shadow-sm">18.10.25 • WedSnap</span>
+<button class="photo-zoom-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+<div class="pt-2 px-1 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Toast Gelas Kristal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">oleh Dimas Arya</span>
+</div>
+<button class="save-photo-btn w-8 h-8 rounded-full bg-surface-container-low hover:bg-secondary-container text-on-surface-variant flex items-center justify-center shrink-0 transition-colors" title="Unduh Foto">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="photo-card group bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col transition-transform active:scale-[0.99]" data-author="Vanya Putri" data-caption="Tawa Hangat Meja Sahabat" data-category="all" data-id="4" data-time="18.10.25 • 20:30">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Group of stylish Indonesian wedding guests laughing naturally around candlelit banquet dinner table, warm ivory suits and silk dresses, authentic candid disposable camera aesthetic with soft grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyrDLjRxyhnJkcWbS0qCKbkD6vMfdRt0Z38JtEa_-yGggbOVQW_kuwzn9LUzU1tf-6bak8XhrIDi7TfkQU5jrMCcl0hrbBdVQ1p0IsN-Lq46bKtqwt_3sZ-hqInOtWQasg9nSz-bzRIjmTLqSTeoymCOrgwgyBlD9Vz5hEnAnbQ2p7FMAdtFzDr9HEOHSPBpqUEQ4PpvwfxB7_6Qs4nZ58od2pz18-OEYdMRh6_VbIu7yS_CdJzpIB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-70"></div>
+<span class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-primary/90 font-mono tracking-wider drop-shadow-sm">18.10.25 • WedSnap</span>
+<button class="photo-zoom-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+<div class="pt-2 px-1 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Meja Sahabat SMA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">oleh Vanya Putri</span>
+</div>
+<button class="save-photo-btn w-8 h-8 rounded-full bg-surface-container-low hover:bg-secondary-container text-on-surface-variant flex items-center justify-center shrink-0 transition-colors" title="Unduh Foto">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="photo-card group bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col transition-transform active:scale-[0.99]" data-author="Saya (Kamera 04)" data-caption="Detail Gaun &amp; Rangkaian Bunga" data-category="all mine" data-id="5" data-time="18.10.25 • 18:50">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Detailed shot of bride lace wedding dress train with fallen champagne rose petals on wooden parquet floor, moody artistic composition, warm vintage camera tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcMN0x3sB-6gUdZeGRSs9D04ySMnv1dbYTtJGln3Nj7aXh6L_1sNakI08-neoiu7k0a6MfPAwwNOq7o18SREYLVdnVM-PE8h7e1g0rWQJofGphjDqqhS9aODVK2XfjBGmxYMQ5hjBkbi5rPQVlS2x8jHYFFDvtIJTz0FqnLoFS894yFDePvdygjceqsXEPZu4yUEax2S1yQNX2x1zjgRyvnwzXoCXeozbbZujjjrdJrqBJ3UuF-Kyh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-70"></div>
+<span class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-primary/90 font-mono tracking-wider drop-shadow-sm">18.10.25 • WedSnap</span>
+<span class="absolute top-2 left-2 bg-primary/80 backdrop-blur text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">Milikmu</span>
+<button class="photo-zoom-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+<div class="pt-2 px-1 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Lantai Dansa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Foto Kamu</span>
+</div>
+<button class="save-photo-btn w-8 h-8 rounded-full bg-surface-container-low hover:bg-secondary-container text-on-surface-variant flex items-center justify-center shrink-0 transition-colors" title="Unduh Foto">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="photo-card group bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col transition-transform active:scale-[0.99]" data-author="Bagas Ramadhan" data-caption="Langkah Pertama Pengantin" data-category="all recent" data-id="6" data-time="18.10.25 • 21:05">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Groom and bride holding hands walking down the grand ballroom aisle amidst showering white petals, sparkling warm backlight, joyous candid expressions, 35mm film wedding photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl8FAP0HeYY0lI6vj25NL6SoBCXrg6ZMCDrZ48UEEdaFKerwk-axCZH9VIHSW9Wf-ATSglR15LuxhtXI6l3vZ4duBFkVfXhqgIHZWRo-xpidViVIczv--nkHy6Mjw_YSgxMW8lXe_9I4-nXeYvvOYmz178Kagpb0GZqz8cu6_8Ix9a1bsx0yHrCXogpAoz4-IXNSRKE-0TI8GRFmwOhNJuz_XD2JJ-pMSM-U0NUE1JKRfaCFUy7BRY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-70"></div>
+<span class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-primary/90 font-mono tracking-wider drop-shadow-sm">18.10.25 • WedSnap</span>
+<button class="photo-zoom-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+<div class="pt-2 px-1 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Grand Exit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">oleh Bagas R.</span>
+</div>
+<button class="save-photo-btn w-8 h-8 rounded-full bg-surface-container-low hover:bg-secondary-container text-on-surface-variant flex items-center justify-center shrink-0 transition-colors" title="Unduh Foto">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State Banner (Shown dynamically or when a filter has 0 items) -->
+<div class="hidden bg-surface-container-low rounded-xl p-space-xl flex flex-col items-center text-center gap-space-sm shadow-sm my-space-md" id="emptyState">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[32px]">photo_camera_back</span>
+</div>
+<div class="flex flex-col gap-1 max-w-[280px]">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Belum Ada Foto Terbit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Foto tamu akan otomatis muncul di sini begitu diambil dan selesai dicuci digital.
+        </p>
+</div>
+<button class="mt-space-xs px-space-md py-2.5 bg-primary text-on-primary rounded-xl font-label-md text-label-md shadow-sm">
+        Buka Kamera Saya
+      </button>
+</div>
+<!-- Memory Counter Footer Note -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[24px]">auto_awesome</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Roll digital ini akan ditutup resmi dan dikurasi otomatis dalam <strong class="text-on-surface">18 jam</strong> ke depan.
+      </p>
+</div>
+</section>
+<!-- Interactive Lightbox Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/90 backdrop-blur-md hidden flex-col justify-between p-margin select-none" id="lightboxModal">
+<!-- Lightbox Topbar -->
+<div class="flex items-center justify-between text-inverse-on-surface pt-safe">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm leading-snug" id="lbTitle">Foto Preview</span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface/70" id="lbMeta">18.10.25 • WedSnap</span>
+</div>
+<button aria-label="Tutup Preview" class="w-10 h-10 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/40 flex items-center justify-center text-inverse-on-surface transition-colors" id="closeLightboxBtn">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Lightbox Main Frame (Polaroid Inspired) -->
+<div class="flex-1 flex items-center justify-center py-space-md">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-xl p-3 pb-6 shadow-2xl flex flex-col gap-2">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Enlarged view of natural candid wedding moment in warm romantic tones" id="lbImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCsQouMNdpirbk1D6Cs_x737V-jDjbkJ8taNQnXrO11jxIsuThzhb1rD6Q018dl6tcQdD6FrAWdMFZrDaEmV7mRSPqC2_xqX574W3fsWck5_SaPPtphnfiArqEhra35B17W6m_of6ho37fZbX3izZWM1JLZKdHwKipMWKyd5gQwE116UUrCELPOKHOB4W7mUxMejnRjCerhVXA7WR9rTRsHcFZApx4mFrt7ytCr-5GXyjpSyhVkkHx"/>
+<span class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-primary/95 font-mono drop-shadow">18.10.25 • WedSnap</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-md text-body-md text-on-surface italic font-headline-sm" id="lbAuthor">oleh Tamu Undangan</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">KODAK 400 WARM</span>
+</div>
+</div>
+</div>
+<!-- Lightbox Bottom Actions -->
+<div class="flex items-center justify-around gap-space-md pb-safe">
+<button class="flex-1 h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.98]" id="lbSaveBtn">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+<span>Unduh Foto Ini</span>
+</button>
+<button class="w-12 h-12 bg-surface-container-highest/30 text-inverse-on-surface rounded-xl flex items-center justify-center shadow-sm" id="lbShareBtn">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Tab filtering
+    const tabs = document.querySelectorAll('.gallery-tab');
+    const cards = document.querySelectorAll('.photo-card');
+    const emptyState = document.getElementById('emptyState');
+    const photoGrid = document.getElementById('photoGrid');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        tab.classList.remove('text-on-surface-variant');
+
+        const target = tab.getAttribute('data-target');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          if (target === 'all' || category.includes(target)) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0) {
+          emptyState.classList.remove('hidden');
+          photoGrid.classList.add('hidden');
+        } else {
+          emptyState.classList.add('hidden');
+          photoGrid.classList.remove('hidden');
+        }
+      });
+    });
+
+    // Toast Notification Utility
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    let toastTimeout;
+
+    function showToast(message) {
+      if (!toast) return;
+      toastMsg.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-[-8px]');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-[-8px]');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2600);
+    }
+
+    // Share Link Action
+    const shareBtn = document.getElementById('shareLinkBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('Tautan album pernikahan berhasil disalin!');
+          }).catch(() => {
+            showToast('Tautan album siap dibagikan!');
+          });
+        } else {
+          showToast('Tautan album siap dibagikan!');
+        }
+      });
+    }
+
+    // Download Zip Action
+    const downloadZipBtn = document.getElementById('downloadZipBtn');
+    if (downloadZipBtn) {
+      downloadZipBtn.addEventListener('click', () => {
+        showToast('Menyiapkan berkas ZIP 248 foto...');
+      });
+    }
+
+    // Lightbox Modal Logic
+    const lightbox = document.getElementById('lightboxModal');
+    const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+    const lbTitle = document.getElementById('lbTitle');
+    const lbAuthor = document.getElementById('lbAuthor');
+    const lbMeta = document.getElementById('lbMeta');
+    const lbSaveBtn = document.getElementById('lbSaveBtn');
+    const lbShareBtn = document.getElementById('lbShareBtn');
+
+    function openLightbox(card) {
+      const title = card.getAttribute('data-caption') || 'Foto Resepsi';
+      const author = card.getAttribute('data-author') || 'Tamu Undangan';
+      const time = card.getAttribute('data-time') || '18.10.25 • WedSnap';
+
+      lbTitle.textContent = title;
+      lbAuthor.textContent = author;
+      lbMeta.textContent = time;
+
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    }
+
+    cards.forEach(card => {
+      // Tap on viewport / zoom button opens preview
+      const previewArea = card.querySelector('.relative.w-full');
+      if (previewArea) {
+        previewArea.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openLightbox(card);
+        });
+      }
+
+      // Single photo download
+      const saveBtn = card.querySelector('.save-photo-btn');
+      if (saveBtn) {
+        saveBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const cap = card.getAttribute('data-caption') || 'Foto';
+          showToast('Mengunduh "' + cap + '" dalam resolusi tinggi...');
+        });
+      }
+    });
+
+    if (closeLightboxBtn) {
+      closeLightboxBtn.addEventListener('click', closeLightbox);
+    }
+
+    if (lightbox) {
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    if (lbSaveBtn) {
+      lbSaveBtn.addEventListener('click', () => {
+        showToast('Menyimpan foto ke galeri perangkat...');
+      });
+    }
+
+    if (lbShareBtn) {
+      lbShareBtn.addEventListener('click', () => {
+        showToast('Tautan foto disalin ke papan klip!');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(45,41,38,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm">Ringkasan</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="camera" href="#"><span class="material-symbols-outlined text-[24px]">photo_camera</span><span class="font-label-sm text-label-sm">Kamera</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="gallery" href="#"><span class="material-symbols-outlined text-[24px]">photo_library</span><span class="font-label-sm text-label-sm">Galeri</span></a></div></nav></body></html>

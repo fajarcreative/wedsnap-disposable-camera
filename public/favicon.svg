@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8f5"/>
+      <stop offset="100%" stop-color="#f5ece7"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cca72f"/>
+      <stop offset="50%" stop-color="#b89758"/>
+      <stop offset="100%" stop-color="#755a21"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34302c"/>
+      <stop offset="100%" stop-color="#1e1b18"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#755a21" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <rect x="24" y="24" width="464" height="464" rx="88" fill="none" stroke="#d1c5b5" stroke-width="2"/>
+  
+  <!-- Camera Body -->
+  <g filter="url(#shadow)">
+    <!-- Shutter button & Top dial -->
+    <rect x="120" y="140" width="48" height="24" rx="6" fill="#755a21"/>
+    <rect x="330" y="148" width="60" height="16" rx="4" fill="#a08040"/>
+    <!-- Top prism -->
+    <path d="M200 156 L224 136 L288 136 L312 156 Z" fill="#9e7e38"/>
+    <!-- Main Body -->
+    <rect x="88" y="156" width="336" height="230" rx="32" fill="url(#gold)"/>
+    <!-- Body Grip / Vintage Texture Panel -->
+    <rect x="96" y="206" width="320" height="144" rx="8" fill="#1e1b18" opacity="0.12"/>
+    <!-- Accent Gold Stripe -->
+    <rect x="96" y="324" width="320" height="12" fill="#ffdea4" opacity="0.8"/>
+    <!-- Flash Window -->
+    <rect x="334" y="174" width="44" height="26" rx="6" fill="#fff8f5" stroke="#755a21" stroke-width="2"/>
+    <rect x="342" y="180" width="28" height="14" rx="3" fill="#ffe088" opacity="0.9"/>
+    <!-- Viewfinder -->
+    <rect x="134" y="174" width="30" height="20" rx="4" fill="#34302c"/>
+    <!-- Lens Assembly -->
+    <circle cx="256" cy="272" r="78" fill="#f5ece7" stroke="#755a21" stroke-width="5"/>
+    <circle cx="256" cy="272" r="64" fill="url(#lens)"/>
+    <circle cx="256" cy="272" r="44" fill="#1e1b18" stroke="#cca72f" stroke-width="3"/>
+    <circle cx="256" cy="272" r="24" fill="#110f0e"/>
+    <!-- Glint -->
+    <circle cx="240" cy="256" r="10" fill="#ffffff" opacity="0.85"/>
+    <circle cx="268" cy="284" r="4" fill="#ffffff" opacity="0.5"/>
+  </g>
+  <!-- Brand text under camera -->
+  <text x="256" y="440" font-family="sans-serif" font-size="28" font-weight="700" fill="#755a21" text-anchor="middle" letter-spacing="2">WEDSNAP</text>
+</svg>
