@@ -23,6 +23,7 @@ const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [dismissBanner, setDismissBanner] = useState(false);
   const configured = isSupabaseConfigured();
 
   useEffect(() => {
@@ -84,15 +85,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <AuthContext.Provider value={{ user, loading, configured, signIn, signUp, signOut }}>
-      {!configured && (
-        <div
-          className="fixed top-0 left-0 right-0 z-[9999] px-4 py-2 text-center text-xs font-medium"
-          style={{
-            backgroundColor: 'var(--color-tertiary-container)',
-            color: 'var(--color-on-tertiary-container)',
-          }}
-        >
-          ⚠️ Supabase not configured — set VITE_SUPABASE_URL &amp; VITE_SUPABASE_ANON_KEY in .env
+      {!configured && !dismissBanner && (
+        <div className="fixed top-0 left-0 right-0 z-[9999] px-4 py-1.5 text-center text-xs font-semibold bg-[#ffdea4] text-[#443000] border-b border-[#cca72f] flex items-center justify-between">
+          <span className="flex-1 text-center">
+            Mode Demo / Offline — Supabase belum dikonfigurasi di .env
+          </span>
+          <button
+            type="button"
+            onClick={() => setDismissBanner(true)}
+            className="w-5 h-5 flex items-center justify-center rounded-full hover:bg-black/10 text-xs font-bold shrink-0 ml-2"
+            title="Tutup pemberitahuan"
+          >
+            ✕
+          </button>
         </div>
       )}
       {children}
